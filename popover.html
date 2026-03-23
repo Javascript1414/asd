@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .popover { position: relative; }
+        .popover-content { display: none; position: absolute; background: #fff; border: 1px solid #ccc; padding: 5px; top: 100%; width: 120px; }
+        input[type="checkbox"] { display: none; }
+        input[type="checkbox"]:checked ~ .popover-content { display: block; }
+    </style>
+</head>
+<body>
+    <div class="popover">
+        <input type="checkbox" id="toggle">
+        <label for="toggle">Click me</label>
+        <div class="popover-content">
+            Hare Krishna!
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <style>
+        .bar { width: 250px; height: 18px; border: 1px solid #ccc; }
+        .fill { width: 0; height: 100%; background: #0004f5; }
+    </style>
+</head>
+<body>
+    <div class="bar"><div id="fill" class="fill"></div></div>
+    <button onclick="move()">Start</button>
+    <script>
+        function move() {
+            const bar = document.getElementById('fill');
+            let a = 0;
+            const t = setInterval(() => {
+                if (a >= 100) return clearInterval(t);
+                a += 10;
+                bar.style.width = a + '%';
+            }, 200);
+        }
+    </script>
+</body>
+</html>
